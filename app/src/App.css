@@ -7,14 +7,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+};
 
-.login_form {
+.login-form {
   border: 1px solid black;
   border-radius: 5px;
 };
 
-
-
-
+.login-card {
+  border: 1px solid black;
+  border-radius: 5px;
+}
 

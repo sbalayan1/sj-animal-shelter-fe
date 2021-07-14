@@ -29,16 +29,16 @@ import { Route, Switch, useHistory } from 'react-router-dom'
     return (
       <div className = "App">
         <Switch>
-          <Route>
-            <Login exact path="/login"
+          <Route exact path="/login">
+            <Login 
               currentUser={currentUser}
               setCurrentUser={setCurrentUser}
               loginValidated={loginValidated}
               setLoginValidated={setLoginValidated}
             />
           </Route>
-          <Route>
-            <Signup exact path="/signup"/>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
         </Switch>
       </div>
@@ -47,16 +47,16 @@ import { Route, Switch, useHistory } from 'react-router-dom'
     return (
       <div className="App"> 
         <Switch>
-          <Route>
-            <Login exact path="/login"
+          <Route exact path="/login">
+            <Login 
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
                   loginValidated={loginValidated}
                   setLoginValidated={setLoginValidated}
             />
           </Route>
-          <Route>
-            <Signup exact path="/signup"/>
+          <Route  exact path="/signup">
+            <Signup />
           </Route>
           <Route exact path="/">
             <Home visitorData = {visitorData}/>
