@@ -34,6 +34,7 @@
   border: 1px solid black;
   border-radius: 16px;
   padding: 8px;
+  background-color: aquamarine;
 }
 
 .homescreen_cards {
@@ -41,7 +42,7 @@
   justify-content: center;
 }
 
-.shelter_card, .dog_card, .cat_card, .adoption_card {
+.shelter_card {
   border: 1px solid black;
   padding: 8px;
   border-radius: 16px;
@@ -49,39 +50,83 @@
   max-width: 100px;
   min-height: 150px;
   justify-content: center;
-  color: orange;
+  color: black;
+  background-color: lightsalmon;
 }
+
+.dog_card{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 8px;
+  max-width: 100px;
+  min-height: 150px;
+  justify-content: center;
+  color: black;
+  background-color: lightgreen;
+}
+
+.cat_card{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 8px;
+  max-width: 100px;
+  min-height: 150px;
+  justify-content: center;
+  color: black;
+  background-color: lightskyblue;
+}
+
+
+.adoption_card{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 8px;
+  max-width: 100px;
+  min-height: 150px;
+  justify-content: center;
+  color: black;
+  background-color: lightgoldenrodyellow;
+}
+
 
 .dog_list {
   display: vertical;
 }
 
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
 .greeting {
+  margin: none;
   text-align: center;
   font-size: 50px;
   background-color: purple;
   height: 10vh;
-
+  border: 1px solid black;
   border-radius: 16px;
 }
 
 .animal-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-row-gap: 24px;
-  justify-content: space-evenly;
-  align-items: center;
+  grid-template-columns: repeat(3, 250px);
+  grid-row-gap: 12px;
   /* width: 100%; */
-  margin: auto;
-  height: 80vh;
+  height: 85%;
+  align-items: center;
 }
 
 .animal-card {
   display: flex;
-  margin: auto;
   flex-direction: column;
   align-items: center;
-  height: 95%;
+  height: 100%;
   width: 200px;
   max-width: 200px;
   border: 1px solid black;
@@ -91,10 +136,11 @@
 }
 
 .animal-image {
-  height: 90%;
-  width: 90%;
-  /* max-height: 100px;
-  max-width: 100px; */
+  align-self: left;
+  height: 110vh;
+  width: 100vh;
+  max-height: 100px;
+  max-width: 100px;
   border-radius: 16px;
 }
 
