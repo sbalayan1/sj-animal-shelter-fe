@@ -6,11 +6,16 @@ import { Route, Switch, useHistory } from 'react-router-dom'
   import Home from './Home'
   import Login from './Login'
   import Signup from './Signup'
+  import Dog from './Dog'
+  import Cat from './Cat'
+  import Adoption from './Adoption'
+  import Shelter from './Shelter'
 
   let App = () => {
       // set login validated to true if you want to work on the rest of the app
     const [loginValidated, setLoginValidated] = useState(true)
     const [visitorData, setVisitorData] = useState([])
+    const [animalData, setAnimalData] = useState([])
     const [shelterData, setShelterData] = useState([])
     const [currentUser, setCurrentUser] = useState({
       username: "",
@@ -22,6 +27,12 @@ import { Route, Switch, useHistory } from 'react-router-dom'
     fetch('http://localhost:9393/visitors/')
     .then(res => res.json())
     .then(data => setVisitorData(data.visitors))
+  },[])
+
+  useEffect (() => {
+    fetch('http://localhost:9393/animals/')
+    .then(res => res.json())
+    .then(data => setAnimalData(data.animals))
   },[])
 
   if (loginValidated === false) {
@@ -60,6 +71,9 @@ import { Route, Switch, useHistory } from 'react-router-dom'
           </Route>
           <Route exact path="/">
             <Home visitorData = {visitorData}/>
+          </Route>
+          <Route exact path="/dogs">
+            <Dog animalData = {animalData}/>
           </Route>
         </Switch>
       </div>

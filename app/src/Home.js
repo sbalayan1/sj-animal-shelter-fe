@@ -1,7 +1,13 @@
-
+import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 let Home = (visitorData) => {
-    let visitor = Object.values(visitorData.visitorData).map ((visitor) => visitor.name)
+    const history = useHistory()
+    // let visitor = Object.values(visitorData.visitorData).map ((visitor) => visitor.name)
+
+    const handleRenderDog = () => {
+        history.push('/dogs')
+    }
 
     // console.log(visitor)
 
@@ -15,7 +21,7 @@ let Home = (visitorData) => {
             </div>
             <div className="homescreen_cards">
                 <div className="shelter_card">Shelter Card goes here...</div>
-                <div className="dog_card">Dog Card goes here...</div>
+                <div className="dog_card" onClick={handleRenderDog}>See all dogs!</div>
                 <div className="cat_card">Cat Card goes here...</div>
                 <div className="adoption_card">Adoption Card goes here...</div>
             </div>
