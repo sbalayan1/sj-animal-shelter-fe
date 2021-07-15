@@ -17,8 +17,10 @@ export default function Cat(animalData) {
     // console.log(cat1)
 
     return (
-        <div className="cat-container">
-            <h1 className="greeting"><em>Hello sir. Please adopt me!</em> </h1>
+
+        <div>
+            <h1 className="greeting"><em>Hello human. Please adopt me!</em> </h1>
+
             <div className="animal-container">
                 <div className="animal-card">
                     <img className="animal-image" src='http://petnaturals.com/blog/wp-content/uploads/2013/08/cat-in-space.jpg' alt="picture of cat"/>           
