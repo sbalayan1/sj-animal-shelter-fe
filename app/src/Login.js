@@ -35,7 +35,7 @@ let Login = ({ currentUser, setCurrentUser, loginValidated, setLoginValidated, v
                     if (user.name === currentUser.username) {
                         return user.name === currentUser.username
                     } else {
-                        history.push('/login')
+                        history.push("/login")
                         setLoginValidated(false)
                     }
                 })

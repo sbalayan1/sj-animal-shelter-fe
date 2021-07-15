@@ -49,7 +49,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
   },[])
 
   if (loginValidated === false) {
-    history.push('/login')
+    history.push("/login")
     return (
       <div className = "App">
         <Switch>
