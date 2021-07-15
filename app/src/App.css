@@ -20,10 +20,17 @@
 }
 
 .homescreen_cards {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 .shelter_card, .dog_card, .cat_card, .adoption_card {
   border: 1px solid black;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 8px;
+  max-width: 100px;
+  min-height: 150px;
+  justify-content: center;
 }
 
