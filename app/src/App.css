@@ -19,3 +19,11 @@
   border-radius: 5px;
 }
 
+.homescreen_cards {
+  border: 1px solid black;
+}
+
+.shelter_card, .dog_card, .cat_card, .adoption_card {
+  border: 1px solid black;
+}
+
