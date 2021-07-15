@@ -13,7 +13,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
 
   let App = () => {
       // set login validated to true if you want to work on the rest of the app
-    const [loginValidated, setLoginValidated] = useState(true)
+    const [loginValidated, setLoginValidated] = useState(false)
     const [visitorData, setVisitorData] = useState([])
     const [animalData, setAnimalData] = useState([])
     const [shelterData, setShelterData] = useState([])
@@ -59,6 +59,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
               setCurrentUser={setCurrentUser}
               loginValidated={loginValidated}
               setLoginValidated={setLoginValidated}
+              visitorData={visitorData}
             />
           </Route>
           <Route exact path="/signup">
@@ -77,6 +78,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
                   setCurrentUser={setCurrentUser}
                   loginValidated={loginValidated}
                   setLoginValidated={setLoginValidated}
+                  visitorData={visitorData}
             />
           </Route>
           <Route  exact path="/signup">
