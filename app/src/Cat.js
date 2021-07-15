@@ -1,4 +1,5 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
+
 
 export default function Cat(animalData) {
     let catArray = Object.values(animalData.animalData).filter ((animal) => animal.species === "Cat")
@@ -13,7 +14,7 @@ export default function Cat(animalData) {
     let cat6 = catArray[Math.floor(Math.random()*catArray.length)]
 
 
-    console.log(cat1)
+    // console.log(cat1)
 
     return (
         <div className="animal-container">
@@ -24,7 +25,7 @@ export default function Cat(animalData) {
                 <h6>Breed: {cat1.breed}</h6>
             </div> 
             <div className="animal-card">
-                <img className="animal-image" src='http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Neighbours_Siamese.jpg/640px-Neighbours_Siamese.jpg' alt="picture of cat"/>           
+                <img className="animal-image" src='http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Neighbours_Siamese.jpg/640px-Neighbours_Siamese.jpg' alt="picture of cat2"/>           
                 <h4>Name: {cat2.name}</h4>
                 <h6>Age: {cat2.age}</h6>
                 <h6>Breed: {cat2.breed}</h6>
