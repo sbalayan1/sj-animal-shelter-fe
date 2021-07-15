@@ -52,13 +52,30 @@
   display: vertical;
 }
 
+.animal-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-row-gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  margin: auto;
+}
+
 
 .animal-card {
-  display: flex;
+  /* display: flex; */
+  margin: auto;
   flex-direction: column;
   align-items: space-between;
+  max-height: 200px;
+  max-width: 115px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 12px;
 }
 
 .animal-image {
-  height: 30vh;
+  max-height: 100px;
+  max-width: 100px
 }
