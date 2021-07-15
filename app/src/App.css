@@ -1,7 +1,7 @@
 .App {
   background-color: white;
   background-image: url('http://cdn.wallpaperhi.com/1920x1080/20130328/humor%20police%20horses%20zebras%20criminal%20simple%201920x1080%20wallpaper_www.wallpaperhi.com_97.jpg');
-  background-size: 100vh;
+  background-size: cover;
   background-repeat: repeat;
   opacity: 0.9;
   height: 100vh;
@@ -74,28 +74,28 @@
   margin: auto;
   height: 80vh;
 }
-.animal-card {
 
+.animal-card {
   display: flex;
   margin: auto;
   flex-direction: column;
-  align-items: space-around;
-  height: 90%;
-  max-width: 100px;
+  align-items: center;
+  height: 95%;
+  width: 200px;
+  max-width: 200px;
   border: 1px solid black;
   border-radius: 16px;
   background-color: royalblue;
 
-
+}
 
 .animal-image {
-
-  height: 100vh;
-  width: 100vh;
-  max-height: 100px;
-  max-width: 100px;
+  height: 90%;
+  width: 90%;
+  /* max-height: 100px;
+  max-width: 100px; */
   border-radius: 16px;
-
+}
 
 .adopt-button {
   border-radius: 16px;
