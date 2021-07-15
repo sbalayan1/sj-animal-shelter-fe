@@ -18,7 +18,7 @@ export default function Cat(animalData) {
 
     return (
         <div>
-            <h1 className="greeting"><em>Hello sir. Please adopt me!</em> </h1>
+            <h1 className="greeting"><em>Hello human. Please adopt me!</em> </h1>
             <div className="animal-container">
                 
                 <div className="animal-card">

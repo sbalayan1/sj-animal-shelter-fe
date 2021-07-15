@@ -2,7 +2,8 @@
   background-color: white;
   background-image: url('http://cdn.wallpaperhi.com/1920x1080/20130328/humor%20police%20horses%20zebras%20criminal%20simple%201920x1080%20wallpaper_www.wallpaperhi.com_97.jpg');
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.9;
   height: 100vh;
   text-align: center;
