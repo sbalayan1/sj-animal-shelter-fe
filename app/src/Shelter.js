@@ -33,7 +33,7 @@ export default function Shelter(shelterData) {
                 <h5>--Los Angeles Area--</h5>
             </div>
             <div className="shelter-card">
-                <img className="shelter-pic" src="https://www.pawspueblo.org/wp-content/uploads/2019/05/Screen-Shot-2017-10-31-at-11.56.18-AM-1.png" alt="shelter-pic-4"/>
+                <img className="shelter-pic" src="http://sacramentocityexpress.com/wp-content/uploads/2014/03/mg_5874.jpg?w=604" alt="shelter-pic-4"/>
                 <h4>{sfShelter1.name}</h4>
                 <h5>--San Francisco Area--</h5>
             </div>
