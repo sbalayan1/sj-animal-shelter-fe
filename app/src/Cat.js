@@ -1,4 +1,5 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
+
 
 export default function Cat(animalData) {
     let catArray = Object.values(animalData.animalData).filter ((animal) => animal.species === "Cat")
@@ -13,7 +14,7 @@ export default function Cat(animalData) {
     let cat6 = catArray[Math.floor(Math.random()*catArray.length)]
 
 
-    console.log(cat1)
+    // console.log(cat1)
 
     return (
         <div>
@@ -63,6 +64,7 @@ export default function Cat(animalData) {
                     <button className="adopt-button">Adopt</button>
                 </div>
             </div>
+
         </div>
     )
 }
