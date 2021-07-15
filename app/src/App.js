@@ -17,6 +17,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
     const [visitorData, setVisitorData] = useState([])
     const [animalData, setAnimalData] = useState([])
     const [shelterData, setShelterData] = useState([])
+    const [adoptionData, setAdoptionData] = useState([])
     const [currentUser, setCurrentUser] = useState({
       username: "",
       password: ""
@@ -33,6 +34,18 @@ import { Route, Switch, useHistory } from 'react-router-dom'
     fetch('http://localhost:9393/animals/')
     .then(res => res.json())
     .then(data => setAnimalData(data.animals))
+  },[])
+
+  useEffect (() => {
+    fetch('http://localhost:9393/shelters/')
+    .then(res => res.json())
+    .then(data => setShelterData(data.shelters))
+  },[])
+
+  useEffect (() => {
+    fetch('http://localhost:9393/adoptions/')
+    .then(res => res.json())
+    .then(data => setAdoptionData(data.adoptions))
   },[])
 
   if (loginValidated === false) {
@@ -74,6 +87,15 @@ import { Route, Switch, useHistory } from 'react-router-dom'
           </Route>
           <Route exact path="/dogs">
             <Dog animalData = {animalData}/>
+          </Route>
+          <Route exact path="/cats">
+            <Cat animalData = {animalData}/>
+          </Route>
+          <Route exact path="/shelters">
+            <Shelter shelterData = {shelterData}/>
+          </Route>
+          <Route exact path="/adoptions">
+            <Adoption adoptionData = {adoptionData} animalData = {animalData}/>
           </Route>
         </Switch>
       </div>

@@ -9,6 +9,18 @@ let Home = (visitorData) => {
         history.push('/dogs')
     }
 
+    const handleRenderCat = () => {
+        history.push('/cats')
+    }
+
+    const handleRenderShelter = () => {
+        history.push('/shelters')
+    }
+
+    const handleRenderAdoption = () => {
+        history.push('/adoptions')
+    }
+
     // console.log(visitor)
 
     return (
@@ -17,13 +29,13 @@ let Home = (visitorData) => {
                 <h1>WestCoast WyldLyfe</h1>
             </div>
             <div className="homescreen_about">
-                <h4>WestCoast WyldLyfe is an application that helps YOU find your new animal companion. By finding the nearest animal shelters to you, we hope to make the process of finding and giving these lovely animals a new home as easy as possible. Established in the summer of 2021, WestCoast Wyldlyfe has already helped dozens of animals find a new family.</h4>
+                <h4>WestCoast WyldLyfe is an application that helps YOU find your new animal companion. By finding the nearest animal shelters to you, we hope to make the process of finding and giving these lovely animals a new home as easy as possible. <hr></hr>Established in the summer of 2021, WestCoast Wyldlyfe has already helped dozens of animals find a new family.</h4>
             </div>
             <div className="homescreen_cards">
-                <div className="shelter_card">Shelter Card goes here...</div>
+                <div className="shelter_card" onClick={handleRenderShelter}>See all shelters!</div>
                 <div className="dog_card" onClick={handleRenderDog}>See all dogs!</div>
-                <div className="cat_card">Cat Card goes here...</div>
-                <div className="adoption_card">Adoption Card goes here...</div>
+                <div className="cat_card" onClick={handleRenderCat}>See all cats!</div>
+                <div className="adoption_card" onClick={handleRenderAdoption}>See all adoptions!</div>
             </div>
             {/* {visitor} */}
         </div>
