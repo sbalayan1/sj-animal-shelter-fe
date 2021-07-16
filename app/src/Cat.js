@@ -1,9 +1,10 @@
 import { React, useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 
 export default function Cat(animalData) {
     let catArray = Object.values(animalData.animalData).filter ((animal) => animal.species === "Cat")
-
+    const history = useHistory()
 
 
     let cat1 = catArray[Math.floor(Math.random()*catArray.length)]
@@ -64,6 +65,7 @@ export default function Cat(animalData) {
                     <small>Breed: {cat6.breed}</small>
                     <button className="adopt-button">Adopt</button>
                 </div>
+                <button className="go-back-button" onClick={()=> history.push('/')}>Go back</button>
             </div>
 
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 export default function Shelter(shelterData) {
 
@@ -12,6 +13,8 @@ export default function Shelter(shelterData) {
 
     let sfShelter1 = (sfShelterArray[0])
     let sfShelter2 = (sfShelterArray[1])
+
+    const history = useHistory()
 
     // console.log(laShelter1)
 
@@ -42,6 +45,7 @@ export default function Shelter(shelterData) {
                 <h4>{sfShelter2.name}</h4>
                 <h5>--San Francisco Area--</h5>
             </div>
+            <button className="go-back-button" onClick={()=> history.push('/')}>Go back</button>
         </div>
     )
 }
