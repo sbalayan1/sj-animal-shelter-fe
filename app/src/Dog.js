@@ -1,4 +1,6 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+
 export default function Dog(animalData) {
     let dogArray = Object.values(animalData.animalData).filter ((animal) => animal.species === "Dog")
     let dog1 = dogArray[0]
@@ -8,6 +10,8 @@ export default function Dog(animalData) {
     let dog5 = dogArray[4]
     let dog6 = dogArray[5]
     // console.log(cat1)
+
+    const history = useHistory()
     return (
       <div>
           <h1 className="greeting"><em>Hello human. Please adopt me!</em> </h1>
@@ -54,6 +58,7 @@ export default function Dog(animalData) {
                 <h6>Breed: {dog6.breed}</h6>
                 <button className="adopt-button">Adopt</button>
             </div> 
+            <button className="go-back-button" onClick={()=> history.push('/')}>Go back</button>
         </div>
       </div>
     )
